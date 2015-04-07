@@ -3,7 +3,7 @@
 @section('content')
     <h1>Buy for $10</h1>
 
-    {!! Form::open() !!}
+    {!! Form::open(['id' => 'billing-form']) !!}
 
         <div class="form-group">
             <label for="card-number">Card Number</label>
@@ -32,9 +32,11 @@
 
         {!! Form::submit('Buy Now', ['class' => 'btn btn-primary']) !!}
 
+    <div class="payment-errors"></div>
     {!! Form::close() !!}
+
 @stop
 
 @section('footer')
-
+    <script src="/js/billing.js"></script>
 @stop

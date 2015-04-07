@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Input;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -23,4 +24,8 @@ Route::controllers([
 Route::get('buy', function()
 {
     return view('buy');
+});
+
+Route::post('buy', function() {
+    return dd(Input::all());
 });
