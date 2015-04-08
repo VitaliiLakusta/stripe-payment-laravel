@@ -15,12 +15,17 @@
 	},
 	"autoload": {
 		"classmap": [
-			"database"
+			"database",
+            "app/Acme"
 		],
 		"psr-4": {
 			"App\\": "app/"
-		}
-	},
+		},
+        "prs-0": {
+          "Playlist": "app/",
+          "Stripe": "vendor/stripe"
+        }
+    },
 	"autoload-dev": {
 		"classmap": [
 			"tests/TestCase.php"

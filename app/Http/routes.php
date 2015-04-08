@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -27,5 +28,15 @@ Route::get('buy', function()
 });
 
 Route::post('buy', function() {
-    return dd(Input::all());
+    $billing = App::make('Acme\Billing\BillingInterface');
+
+
+    $customerId = $billing->charge([
+        'email' => Input::get('email'),
+        'token' => Input::get('stripe-token')
+    ]);
+
+    // ...save customerId in a users database...
+
+    return 'Charge was successful';
 });

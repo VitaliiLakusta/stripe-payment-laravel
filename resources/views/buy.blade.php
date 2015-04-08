@@ -30,6 +30,13 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-6">
+                <label for="email">Email: </label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Email address">
+            </div>
+        </div>
+
         {!! Form::submit('Buy Now', ['class' => 'btn btn-primary']) !!}
 
     <div class="payment-errors"></div>

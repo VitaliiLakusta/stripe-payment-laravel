@@ -30,7 +30,7 @@
 
             $("<input>", {
                 type: 'hidden',
-                name: 'stripeToken',
+                name: 'stripe-token',
                 value: response.id
             }).appendTo(this.form);
 
